@@ -4,6 +4,10 @@ pipeline {
     tools{
             maven 'maven-3'
     }
+
+    options{
+        timeout(time: 1, unit: 'HOURS')
+    }
     
     stages {
         stage('Maven-Clean'){
