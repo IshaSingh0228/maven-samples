@@ -27,13 +27,8 @@ pipeline {
         }
         stage('Maven-Package'){
             steps{
-                sh 'mvn package'
+                sh 'mvn package''
             }
         }
     }
-    
-     post {
-                
-         
-            }
 }
