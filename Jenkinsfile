@@ -23,13 +23,18 @@ pipeline {
         }
         stage('Maven-Package'){
             steps{
-                sh 'mvn package'',
+                sh 'mvn package'
             }
         }
     }
-
-    options{
+post{
+    failure{
+        options{
         retry(3)
         timeout(time: 1, unit: 'HOURS')
     }
+    }
+
+}
+    
 }
