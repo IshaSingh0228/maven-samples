@@ -4,11 +4,6 @@ pipeline {
     tools{
             maven 'maven-3'
     }
-
-    options{
-        retry(3)
-        timeout(time: 1, unit: 'HOURS')
-    }
     
     stages {
         stage('Maven-Clean'){
@@ -28,8 +23,13 @@ pipeline {
         }
         stage('Maven-Package'){
             steps{
-                sh 'mvn package''
+                sh 'mvn package'
             }
         }
+    }
+
+    options{
+        retry(3)
+        timeout(time: 1, unit: 'HOURS')
     }
 }
