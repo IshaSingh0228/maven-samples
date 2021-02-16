@@ -6,24 +6,14 @@ pipeline {
     }
     
     stages {
-        stage('Maven-Clean'){
-            steps{
-                sh 'mvn clean'
-            }
-        }
-        stage('Maven-Compile'){
-            steps{
-                sh 'mvn compile'
-            }
-        }
-        stage('Maven-test'){
-            steps{
-                sh 'mvn test'
-            }
-        }
-        stage('Maven-Package'){
-            steps{
-                sh 'mvn package'
+        stage('build && SonarQube analysis') {
+            steps {
+                withSonarQubeEnv('My SonarQube Server') {
+                    // Optionally use a Maven environment you've configured already
+                    withMaven(maven:'Maven-3') {
+                        sh 'mvn clean package sonar:sonar'
+                    }
+                }
             }
         }
     }
