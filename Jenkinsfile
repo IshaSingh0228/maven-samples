@@ -3,7 +3,7 @@ pipeline {
     
     tools{
             maven 'maven-3'
-            jdk 'java15'
+           // jdk 'java15'
     }
     
     stages {
@@ -17,9 +17,10 @@ pipeline {
             steps {
                 withSonarQubeEnv('sonarqube') {
                     // Optionally use a Maven environment you've configured already
-                    //withMaven(maven:'Maven-3') {
-                        //sh 'mvn clean package sonar:sonar'
-                    sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar'
+                    withMaven(maven:'Maven-3') {
+                        sh 'mvn clean package sonar:sonar'
+                    }
+                    //sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar'
                     
                 }
             }
