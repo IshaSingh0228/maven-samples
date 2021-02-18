@@ -15,8 +15,8 @@
     <module>single-module</module>
   </modules>
          
-         <properties>
-  <sonar.projectKey>Harvey2504_simple-java-maven-app</sonar.projectKey>
+  <properties>
+  <sonar.projectKey>Harvey2504_maven-samples</sonar.projectKey>
   <sonar.organization>myfirstappinqube</sonar.organization>
   <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 </properties>
