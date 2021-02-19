@@ -8,7 +8,7 @@ pipeline {
             maven 'maven-3'
             jdk 'java11'
     }
-    
+    //Nothing Interesting Happening
     stages {
         stage('clean')
         {
