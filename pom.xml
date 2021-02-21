@@ -16,8 +16,8 @@
   </modules>
          
   <properties>
-  <sonar.projectKey>Harvey2504_maven-samples</sonar.projectKey>
-  <sonar.organization>myfirstappinqube</sonar.organization>
+  <sonar.projectKey>IshaSingh0228_maven-samples</sonar.projectKey>
+  <sonar.organization>ishasingh0228</sonar.organization>
   <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 </properties>
 
