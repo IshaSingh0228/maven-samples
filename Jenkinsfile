@@ -18,7 +18,7 @@ pipeline {
         }
         stage('build && SonarQube analysis') {
             steps {
-                withSonarQubeEnv('sonarqube') {
+                withSonarQubeEnv('sonar-server') {
                     
                         bat 'mvn package sonar:sonar'
                     
