@@ -5,8 +5,8 @@ pipeline {
     }
     
     tools{
-            maven 'maven-3'
-            jdk 'java11'
+            maven 'maven3'
+            jdk 'jdk11'
     }
     //Nothing Interesting Happening
     stages {
